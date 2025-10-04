@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Gift to You ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #fff;
+      text-shadow: 0 0 20px #ff6699;
+      position: relative;
+    }
+
+    h1::before, h1::after {
+      content: '❤️';
+      position: absolute;
+      font-size: 2rem;
+      top: -10px;
+    }
+    h1::before { left: -40px; }
+    h1::after { right: -40px; }
+
+    .envelope {
+      margin-top: 40px;
+      width: 200px;
+      height: 200px;
+      background: #ff6699;
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      border-radius: 50% 50% 0 0 / 60% 60% 0 0;
+      transform: rotate(-45deg) scale(1);
+    }
+
+    .envelope:before {
+      content: '';
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background: #ff6699;
+      border-radius: 50% 50% 0 0 / 60% 60% 0 0;
+      transform: rotate(90deg);
+      left: 100px;
+      top: 0;
+    }
+
+    .envelope:hover {
+      transform: rotate(-45deg) scale(1.05);
+    }
+
+    .letter {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg) translateY(200%);
+      width: 220px;
+      background: #fff;
+      text-align: center;
+      padding: 20px;
+      box-sizing: border-box;
+      border-radius: 10px;
+      transition: transform 0.8s ease;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+
+    .envelope.open .letter {
+      transform: translate(-50%, -50%) rotate(45deg) translateY(0);
+    }
+
+    .photos {
+      margin-top: 30px;
+      display: flex;
+      gap: 15px;
+    }
+
+    .photos img {
+      width: 100px;
+      height: 100px;
+      border-radius: 15px;
+      object-fit: cover;
+      box-shadow: 0 0 10px #ff6699;
+      transition: transform 0.3s ease;
+    }
+    .photos img:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>My Gift to You</h1>
+
+  <div class="envelope" onclick="this.classList.toggle('open')">
+    <div class="letter">
+      <p>💌 To the love of my life,<br><br>
+      You make my world brighter every day. <br>
+      This is just a small gift to remind you<br>
+      how much I love you ❤️</p>
+    </div>
+  </div>
+
+  <div class="photos">
+    <img src="https://placekitten.com/200/200" alt="cute photo 1">
+    <img src="https://placekitten.com/201/200" alt="cute photo 2">
+    <img src="https://placekitten.com/202/200" alt="cute photo 3">
+  </div>
+
+  <audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+    Your browser does not support audio.
+  </audio>
+
+</body>
+</html>
